@@ -1,0 +1,430 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size:16px;
+  height:100vh;
+}
+
+h1 {
+  text-align: center;
+  padding:32px;
+  text-transform: uppercase;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+
+h1::after,
+h1::before {
+  display: flex;
+  flex:1;
+  content:"";
+  height:1px;
+  background:#222;
+  margin:0 32px;
+}
+
+h2 {
+  padding:32px;
+}
+
+.play-area {
+  padding:24px;
+  display:flex;
+  justify-content: space-between;
+  height:500px;
+}
+
+.user-circle,
+.computer-circle {
+  border-radius:50%;
+  border:2px solid black;
+  height:400px;
+  width:400px;
+  margin:32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-circle {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-circle p {
+  background:black;
+  color:white;
+  padding:8px 32px;
+}
+
+.controls {
+  text-align: center;
+  width:100%;
+  padding:0 16px;
+}
+
+/* Sliders */
+
+input[type="range"] {
+  padding: 24px 0;
+}
+
+/* Style custom slider */
+
+input[type=range] {
+  -webkit-appearance: none; 
+  width: 100%; 
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; 
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+/* The Slider Thumb */
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px; 
+}
+
+input[type=range]::-moz-range-thumb {
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+/* Slider - the track */
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+/* Custom slider colors */
+
+#red::-webkit-slider-runnable-track {
+  background: red;
+}
+
+#red:focus::-webkit-slider-runnable-track {
+  background: red;
+}
+
+#red::-moz-range-track {
+  background: red;
+}
+
+#red::-ms-fill-lower {
+  background: red;
+}
+#red:focus::-ms-fill-lower {
+  background: red;
+}
+#red::-ms-fill-upper {
+  background: red;
+}
+#red:focus::-ms-fill-upper {
+  background: red;
+}
+
+/* Custom slider colors - Green */
+
+#green::-webkit-slider-runnable-track {
+  background: green;
+}
+
+#green:focus::-webkit-slider-runnable-track {
+  background: green;
+}
+
+#green::-moz-range-track {
+  background: green;
+}
+
+#green::-ms-fill-lower {
+  background: green;
+}
+#green:focus::-ms-fill-lower {
+  background: green;
+}
+#green::-ms-fill-upper {
+  background: green;
+}
+#green:focus::-ms-fill-upper {
+  background: green;
+}
+
+/* Custom slider colors - Blue*/
+
+#blue::-webkit-slider-runnable-track {
+  background: blue;
+}
+
+#blue:focus::-webkit-slider-runnable-track {
+  background: blue;
+}
+
+#blue::-moz-range-track {
+  background: blue;
+}
+
+#blue::-ms-fill-lower {
+  background: blue;
+}
+#blue:focus::-ms-fill-lower {
+  background: blue;
+}
+#blue::-ms-fill-upper {
+  background: blue;
+}
+#blue:focus::-ms-fill-upper {
+  background: blue;
+}
+
+
+/* Decrement and increment buttons */
+
+.btn-change {
+  padding:8px 16px;
+  background:black;
+  color:white;
+  cursor:pointer;
+  font-weight:normal;
+  font-size:24px;
+  display: flex;
+  align-items: center;
+}
+
+.score-text,
+.color-to-match {
+  padding:8px;
+  font-size:32px;
+  font-weight:bold;
+}
+
+.score-text {
+  font-size:24px;
+}
+
+.game-buttons {
+  display: flex;
+}
+
+#btn-match,
+#btn-end-game,
+#reset {
+  height:42px;
+  flex:2;
+  background:lightblue;
+  border:1px solid black;
+  cursor: pointer;
+  font-family:"Raleway", sans-serif;
+  font-weight:bold;
+  font-size:18px;
+  margin: 4px;
+  border-radius:8px;
+}
+
+#reset {
+  flex:1;
+}
+
+#btn-match:focus,
+#btn-end-game:focus {
+  outline:none;
+}
+
+.color-to-match {
+  visibility: hidden;
+  background:black;
+  color:white;
+  font-size:20px;
+}
+
+.blue-color {
+  color:blue;
+}
+
+.red-color {
+  color:red;
+}
+
+.green-color {
+  color:green;
+}
+
+
+.color-value {
+  display:inline-block;
+  width:64px;
+  font-weight:bold;
+}
+
+/* Color Details */
+
+.color-details {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Cheated */
+
+.cheated {
+  background:red !important;
+  color:#fff;
+  font-size:20px;
+}
+
+/* Mobile Controls Hide */
+
+.mobile-decrement {
+  display:none;
+}
+
+.mobile-colorinfo {
+  display:none;
+}
+
+/* Media Queries */
+
+@media(max-width:1200px) {
+  .user-circle,
+  .computer-circle {
+    border-radius:8px;
+    height:400px;
+    width:300px;
+  }
+}
+
+@media(max-width:1024px) {
+  .play-area {
+    flex-direction: column;
+    padding:0;
+  }
+
+  .user-circle,
+  .computer-circle {
+    height:120px;
+    width:100%;
+    border-radius:0;
+    padding:0;
+    margin:0;
+  }
+
+  h1 {
+    padding:16px;
+    font-size:24px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size:20px;
+    padding:20px;
+  }
+
+  .score-text {
+    font-size:16px;
+  }
+
+  .color-details {
+    display:none;
+  }
+
+  .mobile-controls {
+    display:flex;
+    align-items: center;
+    margin:4px 0;
+  }
+
+  .mobile-decrement {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:32px;
+    font-weight:bold;
+    border-radius:16px;
+    border:1px solid black;
+    padding:4px 16px;
+    margin:0 8px;
+    color:#000;
+    cursor:pointer;
+  }
+
+  .mobile-colorinfo {
+    display:block;
+  }
+}
